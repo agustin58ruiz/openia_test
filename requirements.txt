@@ -1,2 +1,2 @@
 os
-openia
+openai
