@@ -25,3 +25,5 @@ python main.py
 # Agregar mas funciones e ir testeando
 
 https://platform.openai.com/docs/libraries/azure-openai-libraries
+
+Funciones de gpt api: https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models
