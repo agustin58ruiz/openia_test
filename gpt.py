@@ -1,7 +1,7 @@
 import openai
 import os
 
-def answer(question, token=None):
+def answer(question, system, token=None):
     if token is None:
         openai.api_key = os.getenv("OPENAI_API_KEY")
     else:
@@ -9,7 +9,7 @@ def answer(question, token=None):
         
     response = openai.ChatCompletion.create(
         model="gpt-4",
-        messages=[{"role": "user", "content": question}],
+        messages=[{"role": "system", "content": system},{"role": "user", "content": question}],
         temperature=0,
         max_tokens=1024
     )
@@ -20,3 +20,4 @@ def answer(question, token=None):
     print("-------------------------------------")
     output = {"output": reply}
     return output
+
